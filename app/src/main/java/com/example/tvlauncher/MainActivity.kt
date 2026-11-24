@@ -115,7 +115,11 @@ fun AppCard(app: AppInfo, onClick: () -> Unit, modifier: Modifier = Modifier) {
             focusedContentColor = TextPrimary
         ),
         scale = CardDefaults.scale(focusedScale = 1.06f),
-        border = CardDefaults.border(focusedBorder = BorderStroke(3.dp, Accent))
+        border = CardDefaults.border(
+            focusedBorder = androidx.tv.material3.Border(
+                border = androidx.compose.foundation.BorderStroke(3.dp, Accent)
+            )
+        ),
     ) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
